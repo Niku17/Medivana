@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediVana - Analysis Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <i class="fas fa-stethoscope"></i> MediVana
+            </a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="main.html" class="nav-link">Fields</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="medical-card">
+            <div class="card-header">
+                <h2><i class="fas fa-file-medical"></i> Analysis Results</h2>
+            </div>
+            
+            <div class="card-body">
+                <h3>Step-by-Step Recommendations</h3>
+
+                <!-- ML Model Suggestions -->
+                <div class="step" id="ml-suggestions">
+                    <h4>Step 1: Medications Suggested by ML Model</h4>
+                    <p>Based on your symptoms, here are the recommended medications:</p>
+                    <ul id="medications-list">
+                        <!-- Medications will be dynamically added here -->
+                    </ul>
+                </div>
+
+                <!-- Common Steps -->
+                <div class="step">
+                    <h4>Step 2: Common Recommendations</h4>
+                    <p>Follow these general steps for faster recovery:</p>
+                    <ul>
+                        <li>Rest for the next 1-2 days.</li>
+                        <li>Drink plenty of fluids (water, herbal teas).</li>
+                        <li>Maintain a balanced diet rich in vitamins and minerals.</li>
+                        <li>Avoid strenuous activities.</li>
+                    </ul>
+                </div>
+
+                <!-- Follow-Up -->
+                <div class="step">
+                    <h4>Step 3: Follow-Up</h4>
+                    <p>When to consult a doctor:</p>
+                    <ul>
+                        <li>If symptoms persist for more than 3 days.</li>
+                        <li>If you experience severe chest pain or difficulty breathing.</li>
+                        <li>If fever exceeds 102°F (39°C).</li>
+                    </ul>
+                </div>
+
+                <!-- Authorized Signature -->
+                <div class="signature">
+                    <p>Authorized by</p>
+                    <img src="signature.png" alt="MediVana Logo" class="signature-logo">
+                    <p class="signature-text">MediVana</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn print-btn" onclick="window.print()">
+                        <i class="fas fa-print"></i> Print Results
+                    </button>
+                    <a href="main.html" class="btn back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Fields
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 MediPredict. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="results-script.js"></script>
+</body>
+</html>
